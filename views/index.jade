@@ -1,0 +1,126 @@
+doctype html
+html(lang='en-US')
+  head
+    meta(charset='utf-8')
+    title Realize Your Potential - Cornerstone on Demand
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='Language', content='en')
+    meta(name='description', content='Cloud-Based applications to recruit, train, and manage.')
+    meta(name='keywords', content='keywords')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui')
+    link(rel='icon', type='image/png', href='/img/favicon.png')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css')
+    link(rel='stylesheet', href='/stylesheets/owl.carousel.min.css')
+    link(rel='stylesheet', href='/stylesheets/owl.theme.default.min.css')
+    link(rel='stylesheet', href='/stylesheets/angucomplete.css')
+    link(rel='stylesheet', href='/stylesheets/animate.css')
+    link(rel='stylesheet', href='/stylesheets/unslider.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body#top(data-ng-app='CornerStoneApp', data-ng-controller='MainController', ng-cloak='')
+    // top search bar
+    ul#headerNav.menu(headroom='')
+      li.brand
+        a(href='#top')
+          img(src='/img/cornerstone-logo.png', alt='cornerstone logo')
+      li
+        i.fa.fa-search(ng-click='searchBar()')
+      li.search-input.fade(ng-show='searching')
+        angucomplete#ex1(placeholder='Search...', pause='100', selectedobject='selectedTitle', localdata='autocomplete', searchfields='title', titlefield='title', minlength='1', inputclass='form-control form-control-small', matchclass='highlight')
+    // hero image
+    .wrapper
+      .push
+      #header.top
+        .content
+          h2
+            | Realize
+            em Your
+            |  Potential
+          br
+          p Explore more about our company
+          a(href='#mission')
+            button.explore-button Learn More
+        .video-res
+          video#self1.html5-video.player(width='100%', loop='', autoplay='', muted='')
+            source(src='/media/background.mp4', width='100%', type='video/mp4')
+            |                 Your browser does not support the video tag.
+          .video-overlay
+        .mobile-banner
+    #mission
+    .mission.wow.fadeInDown
+      h2.center.header Our Mission
+      .container
+        p
+          | Our Mission is simple, to provide your business with excellent service. Our product and customer service team is always available 24/7
+    // logos and testimonials
+    #testimonials
+    .testimonials.wow.fadeInDown
+      h2.center.header Cornerstone Testimonials
+      .single(ng-repeat='testimony in testimonies')
+        img(ng-src='/img/{{testimony.image}}', alt='{{testimony.name}}')
+        p.text {{testimony.testimony}}
+        p.role
+          em {{testimony.name}} - {{testimony.role}}
+    h2.center.header Our Sponsors
+    .logos.wow.fadeInRight
+      .logo-single
+        img(src='/img/civic.jpg', alt='Civic Orchestra')
+      .logo-single
+        img(src='/img/quebec.jpg', alt='Quebec International')
+      .logo-single
+        img(src='/img/total.jpg', alt='Total')
+    // slideshow
+    .events
+      #events
+        h2.center.header Cornerstone Events
+      .unslideEvents(unslider='')
+        ul
+          li
+            img(src='/img/superbowl.jpg', alt='Super Bowl')
+            h3
+              | Super Bowl Party
+            p
+              | Join Us for awesome fun this Sunday at our SuperBowl Party!
+          li
+            img(src='/img/cornerstone1.jpg', alt='Hands on Training')
+            h3
+              | Hands on Training
+            p
+              | Our Training this week will begin at 7PM in the Rec. room.
+          li
+            img(src='/img/hangroom.jpg', alt='Relax Room')
+            h3
+              | Relax Lounge
+            p
+              | Check out our new relaxation room during lunch or your break time. Open Monday - Friday, during normal office hours.
+          li
+            img(src='/img/website.jpg', alt='New Website Release')
+            h3
+              | New Online Portal Release
+            p
+              | Need training for our new system? We've got your covered next Saturday at 9PM in the main auditorium!
+    // instagram account
+    #social
+      h2.center.header The Cornerstone Family
+    wrap-owlcarousel.owl-carousel.wow.fadeInLeft
+      .item(owl-carousel-item='', ng-repeat='image in imageData | limitTo:15')
+        img(ng-src='{{image.images.low_resolution.url}}', alt='Cornerstone Image')
+    // footer
+    footer.footer
+      p
+        | © 2017 Cornerstone On Demand Inc. Powered by -
+        a(href='//www.cornerstoneondemand.com/', target='_blank') Origin Creative
+    a.topHome(scroll-top='', href='#top')
+      i.fa.fa-chevron-up.fa-2x
+    // video fade directive
+    window-video-fade
+    wow-scroll
+    script(src='/js/jquery.min.js')
+    script(src='/js/angular.min.js')
+    script(src='/js/angucomplete.js')
+    script(src='/js/owl.carousel.js')
+    script(src='/js/owl.autoplay.js')
+    script(src='/js/wow.min.js')
+    script(src='/js/headroom.js')
+    script(src='/js/unslider-min.js')
+    script(src='/js/app.js')
+    script(src='/js/directives.js')

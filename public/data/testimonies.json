@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Robert Sanders",
+    "role": "Financial Advisor",
+    "testimony": "\"I was very happy with the service and staff. They had been a tremendous help to our business.\"",
+    "image": "paul.jpg"
+  },
+  {
+    "name": "Lisa Chang",
+    "role": "Product Designer",
+    "testimony": "\"Ron promptly completed the task and communicates really well till the project is completed.\"",
+    "image": "anita.jpg"
+  },
+  {
+    "name": "Mark Inoi",
+    "role": "Producer",
+    "testimony": "\"Thanks so much for guiding us through our group training. I thought we covered a lot.\"",
+    "image": "ryan.jpg"
+  }
+]
