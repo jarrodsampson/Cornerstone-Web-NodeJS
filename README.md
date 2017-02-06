@@ -1,4 +1,4 @@
-# Cornerstone
+# Cornerstone Web Example
 
 Cornerstone assessment Designed by [planlodge](http://planlodge.com).
 
