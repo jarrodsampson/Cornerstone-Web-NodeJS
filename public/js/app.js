@@ -16,7 +16,7 @@ app.controller("MainController", function($scope, $http) { // controller init
     });
 
     // instagram images
-    $http.get("//www.instagram.com/JoinCornerstone/media/").then(function(response) {
+    $http.get("https://www.instagram.com/cornerstoneondemand/media/").then(function(response) {
 
         var half_length = Math.ceil(response.data.items.length / 2);
 
